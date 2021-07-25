@@ -1,0 +1,73 @@
+/* some style */
+.play-btn {
+  color: #7efcf6 !important;
+  padding: 5px !important;
+}
+
+.invisible {
+  display: false !important;
+}
+
+.mic {
+  margin-bottom: 20px;
+}
+
+body {
+  font-family: 'Helvetica sans-serif';
+}
+
+.widget-area {
+  position: absolute;
+  margin-top: 80px;
+  margin-left: 880px;
+}
+
+.searchbar {
+  /* Center the searchbar */
+  position: absolute;
+  /* top: 50%; */
+  margin-top: 30px;
+  margin-left: 50px;
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
+
+  display: flex; /* For displaying elements (icon and text field) side by side */
+  width: 800px;
+  height: 50px;
+  padding: 8px;
+
+  border-bottom: 0.1px;
+  border-bottom-style: solid;
+  border-color: rgb(126,252,246,0.7);
+
+  transition: border-color 100ms ease-out, background-color 100ms ease-out, box-shadow 100ms ease-out;
+}
+
+.searchbar:hover, .searchbar:focus {
+  box-shadow: 0 0 1px #7efcf6;
+  background-color: rgb(126,252,246,0.1);
+  border-color: #7efcf6;
+}
+
+.search-icon {
+  margin-top: 1.8px;
+  padding-right: 5px;
+}
+
+.searchbar-input {
+  font-size: 16px;
+  border-color: rgb(126,252,246,0.7);
+  color: #7efcf6;
+  font-family: 'Inter', sans-serif;
+  border: none;
+}
+
+/* Todo: Find a solution for theme colors in one common place, may be by using css variables */
+/* Todo: I had to change this settings because the theme of Arwes by default puts these colors for input, select and textarea
+    Modify the theme.
+ */
+.searchbar-input:hover, .searchbar-input:focus {
+  border-color: none;
+  background-color: transparent;
+  box-shadow: none;
+}
