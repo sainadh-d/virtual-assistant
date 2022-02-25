@@ -1,33 +1,110 @@
-/* some style */
-.play-btn {
-  color: #7efcf6 !important;
-  padding: 5px !important;
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;300&display=swap');
+
+html, body {
+  font-family: 'Iceland' !important;
+  filter: brightness(105%) !important;
+  background-color: #030A0E	!important;
+  background-image: linear-gradient(rgba(3,10,14,.6), rgba(3,10,14,.6)), url('circuit_board_art_normal.jpg');
+  /* background-image: linear-gradient(rgba(3,10,14,0.85), rgba(3,10,14,0.85)), url('fui.png'); */
+  background-size: auto;
+  /* https://stackoverflow.com/questions/5721904/make-body-fill-entire-screen */
+  height: 100%;
 }
 
-.invisible {
-  display: false !important;
+.heading {
+  color: white !important;
 }
 
 .mic {
   margin-bottom: 20px;
 }
 
-body {
-  font-family: 'Helvetica sans-serif';
+.time-widget {
+  font-size: 25px;
+  padding: 10px;
+  height: 50px;
+  color: #07C3E2;
+}
+
+.status {
+  width: 300px;
+  font-size: 25px;
+  text-align: center;
+  padding: 10px;
+  height: 50px;
+  color: white;
+}
+
+.blink {
+  /* Blinking text */
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.header {
+  text-align: center;
+  font-size: 25px;
+  border-bottom: 1px solid rgb(7,195,226, 0.2);
+  padding: 1px;
+}
+
+.history-item {
+  font-size: 20px;
+  padding-top: 8px;
+  color: #07C3E2;
+}
+
+.top-layout {
+  padding: 20px;
 }
 
 .widget-area {
-  position: absolute;
-  margin-top: 80px;
-  margin-left: 880px;
+  padding: 10px;
 }
+
+/* xmasonry settings */
+.card {
+  margin: 5px;
+}
+
+.widget-area > div {
+  margin: 10px;
+}
+
+
+@keyframes comeIn {
+    0% { transform: scale(.5); opacity: 0; }
+    75% { transform: scale(1.03); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.xmasonry .xblock {
+    animation: comeIn ease 0.5s;
+    animation-iteration-count: 1;
+    transition: left .3s ease, top .3s ease;
+}
+/* xmasonry settings end */
+
+/* .MuiGrid-item {
+  transition: width 2s ease-in-out 1s;
+}
+
+.MuiGrid-item:hover {
+  background-color: white;
+} */
 
 .searchbar {
   /* Center the searchbar */
-  position: absolute;
+  /* position: absolute; */
   /* top: 50%; */
-  margin-top: 30px;
-  margin-left: 50px;
+  /* margin-top: 30px; */
+  /* margin-left: 50px; */
   /* left: 50%; */
   /* transform: translate(-50%, -50%); */
 
@@ -38,15 +115,15 @@ body {
 
   border-bottom: 0.1px;
   border-bottom-style: solid;
-  border-color: rgb(126,252,246,0.7);
+  border-color: rgb(7,195,226,0.7);
 
   transition: border-color 100ms ease-out, background-color 100ms ease-out, box-shadow 100ms ease-out;
 }
 
 .searchbar:hover, .searchbar:focus {
-  box-shadow: 0 0 1px #7efcf6;
-  background-color: rgb(126,252,246,0.1);
-  border-color: #7efcf6;
+  box-shadow: 0 0 1px #07C3E2;
+  background-color: rgb(7,195,226,0.1);
+  border-color: #07C3E2;
 }
 
 .search-icon {
@@ -55,10 +132,11 @@ body {
 }
 
 .searchbar-input {
-  font-size: 16px;
-  border-color: rgb(126,252,246,0.7);
-  color: #7efcf6;
-  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  border-color: rgb(7,195,226,0.7);
+  color: #07C3E2;
+  /* font-family: 'Inter', sans-serif; */
+  /* font-family: 'Inter', sans-serif; */
   border: none;
 }
 

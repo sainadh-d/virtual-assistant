@@ -1,7 +1,9 @@
+server/va-env/
 node_modules/
 .calva/
 .lsp
 package-lock.json
 public/js/compiled/
 .shadow-cljs/
+server/__pycache__
 .DS_Store
